@@ -220,6 +220,12 @@ CONTACT_SECTION = """<section id="contact">
         <p>TEL +886-7-701-3498<br>FAX +886-7-701-9649</p>
         <a class="btn-inline" href="tel:+88677013498">Call Now</a>
       </div>
+      <div class="contact-card">
+        <div class="contact-icon">&#128279;</div>
+        <h3>LinkedIn</h3>
+        <p>RI YUE XING Precision Industrial</p>
+        <a class="btn-inline" href="https://www.linkedin.com/in/riyuexing1987/" target="_blank" rel="noopener">View Profile</a>
+      </div>
     </div>
   </div>
 </section>"""
