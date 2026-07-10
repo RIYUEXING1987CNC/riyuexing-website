@@ -4,29 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RI YUE XING Precision Industrial | Taiwan CNC Precision Turned Parts</title>
-<meta name="description" content="RI YUE XING Precision Industrial Co., Ltd. — Taiwan CNC Swiss-type turning manufacturer since 1987. Precision turned parts Ø2-20mm for connector, medical, fluid power and automotive industries.">
+<meta name="description" content="RI YUE XING Precision Industrial Co., Ltd. — Taiwan CNC Swiss-type turning manufacturer since 1987. Precision turned parts Ø1-20mm for connector, fastener, automotive and MRO industries.">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif; color: #1c2733; line-height: 1.6; background: #fff; }
   a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
   .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
   /* Nav */
   nav { position: sticky; top: 0; z-index: 100; background: #0b2545; border-bottom: 1px solid rgba(201,164,76,0.3); }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1100px; margin: 0 auto; }
-  .nav-logo { color: #fff; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.5px; }
-  .nav-logo span { color: #c9a44c; }
-  .nav-links { display: flex; gap: 28px; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; max-width: 1100px; margin: 0 auto; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand img { width: 38px; height: 38px; }
+  .nav-logo { color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; line-height: 1.2; }
+  .nav-logo span { display: block; color: #c9a44c; font-size: 0.68rem; font-weight: 500; letter-spacing: 1px; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
   .nav-links a { color: #c9d6e8; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: #c9a44c; }
   .nav-cta { background: #c9a44c; color: #0b2545 !important; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; }
-  .nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
 
   /* Hero */
-  .hero { background: linear-gradient(135deg, #0b2545 0%, #123a6b 60%, #1a4a85 100%); color: #fff; padding: 90px 24px 80px; text-align: center; position: relative; overflow: hidden; }
-  .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(201,164,76,0.15), transparent 50%); }
-  .hero-content { position: relative; max-width: 760px; margin: 0 auto; }
+  .hero { position: relative; color: #fff; padding: 100px 24px 90px; text-align: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background-image: url('assets/hero-factory.jpg'); background-size: cover; background-position: center; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,26,48,0.94) 0%, rgba(11,37,69,0.92) 55%, rgba(18,58,107,0.88) 100%); }
+  .hero-content { position: relative; max-width: 780px; margin: 0 auto; }
   .hero-eyebrow { color: #c9a44c; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
   .hero h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
   .hero p { font-size: 1.05rem; color: #c9d6e8; margin-bottom: 34px; }
@@ -49,33 +52,55 @@
 
   /* About */
   #about { background: #f7f9fc; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; max-width: 1000px; margin: 0 auto; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; max-width: 1050px; margin: 0 auto; }
   .about-text p { color: #414d5e; margin-bottom: 16px; font-size: 0.98rem; }
-  .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .fact-card { background: #fff; border: 1px solid #e5eaf0; border-radius: 10px; padding: 20px; }
+  .about-img { border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px rgba(11,37,69,0.15); }
+  .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+  .fact-card { background: #fff; border: 1px solid #e5eaf0; border-radius: 10px; padding: 18px; }
   .fact-card b { display: block; color: #0b2545; font-size: 1rem; margin-bottom: 4px; }
-  .fact-card span { font-size: 0.82rem; color: #708098; }
+  .fact-card span { font-size: 0.8rem; color: #708098; }
 
   /* Capabilities */
-  .capabilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+  .capabilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1050px; margin: 0 auto; }
   .cap-card { border: 1px solid #e5eaf0; border-radius: 12px; padding: 26px 22px; transition: box-shadow 0.2s, border-color 0.2s; }
   .cap-card:hover { box-shadow: 0 8px 24px rgba(11,37,69,0.08); border-color: #c9a44c; }
   .cap-icon { width: 44px; height: 44px; border-radius: 10px; background: #0b2545; color: #c9a44c; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; font-weight: 700; }
   .cap-card h3 { font-size: 1.02rem; color: #0b2545; margin-bottom: 8px; }
   .cap-card p { font-size: 0.86rem; color: #647082; }
-  .spec-bar { max-width: 1000px; margin: 44px auto 0; background: #0b2545; border-radius: 12px; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; }
+  .spec-bar { max-width: 1050px; margin: 44px auto 0; background: #0b2545; border-radius: 12px; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; }
   .spec-item { color: #fff; flex: 1; min-width: 180px; }
   .spec-item b { display: block; color: #c9a44c; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
   .spec-item span { font-size: 1rem; font-weight: 600; }
 
+  .brand-strip { max-width: 1050px; margin: 50px auto 0; text-align: center; }
+  .brand-strip .eyebrow { margin-bottom: 20px; }
+  .brand-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .brand-logos img { height: 42px; width: auto; opacity: 0.85; filter: grayscale(15%); }
+  .brand-logos span.miyano { font-weight: 700; font-size: 1.3rem; color: #333; font-style: italic; }
+
+  .machine-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1050px; margin: 50px auto 0; }
+  .machine-photos figure { border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(11,37,69,0.1); }
+  .machine-photos figcaption { background: #0b2545; color: #c9d6e8; font-size: 0.78rem; padding: 10px 16px; }
+
+  .qc-block { display: grid; grid-template-columns: 1fr 1.1fr; gap: 44px; align-items: center; max-width: 1050px; margin: 60px auto 0; background: #f7f9fc; border-radius: 16px; padding: 36px; }
+  .qc-block img { border-radius: 12px; box-shadow: 0 10px 28px rgba(11,37,69,0.12); }
+  .qc-block h3 { color: #0b2545; font-size: 1.25rem; margin-bottom: 14px; }
+  .qc-block ul { list-style: none; }
+  .qc-block li { font-size: 0.9rem; color: #414d5e; padding: 6px 0; padding-left: 20px; position: relative; }
+  .qc-block li::before { content: '✓'; position: absolute; left: 0; color: #c9a44c; font-weight: 700; }
+
   /* Products */
   #products { background: #f7f9fc; }
-  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 1000px; margin: 0 auto; }
-  .prod-card { background: #fff; border-radius: 12px; padding: 24px; border-left: 4px solid #c9a44c; box-shadow: 0 2px 10px rgba(11,37,69,0.05); }
-  .prod-card h3 { color: #0b2545; font-size: 1rem; margin-bottom: 10px; }
-  .prod-card ul { list-style: none; }
-  .prod-card li { font-size: 0.86rem; color: #566173; padding: 4px 0; padding-left: 16px; position: relative; }
-  .prod-card li::before { content: '—'; position: absolute; left: 0; color: #c9a44c; }
+  .products-banner { max-width: 1050px; margin: 0 auto 40px; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px rgba(11,37,69,0.15); }
+  .products-list { max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  .prod-pill { background: #fff; border-left: 4px solid #c9a44c; border-radius: 8px; padding: 14px 18px; font-size: 0.88rem; font-weight: 600; color: #0b2545; box-shadow: 0 2px 8px rgba(11,37,69,0.05); }
+
+  .industries-strip { max-width: 1050px; margin: 50px auto 0; }
+  .industries-strip .eyebrow { text-align: center; margin-bottom: 24px; }
+  .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+  .industry-card { background: #fff; border-radius: 10px; padding: 20px 14px; text-align: center; box-shadow: 0 2px 8px rgba(11,37,69,0.05); }
+  .industry-card .ico { font-size: 1.6rem; margin-bottom: 10px; }
+  .industry-card span { font-size: 0.82rem; font-weight: 600; color: #33404f; }
 
   /* Markets */
   .markets-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; max-width: 900px; margin: 0 auto; }
@@ -86,22 +111,24 @@
   #contact { background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%); color: #fff; }
   #contact .section-header h2 { color: #fff; }
   #contact .section-header p { color: #c9d6e8; }
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
-  .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,164,76,0.3); border-radius: 12px; padding: 28px 24px; text-align: center; transition: background 0.2s; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+  .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,164,76,0.3); border-radius: 12px; padding: 26px 20px; text-align: center; transition: background 0.2s; }
   .contact-card:hover { background: rgba(255,255,255,0.1); }
-  .contact-icon { font-size: 1.8rem; margin-bottom: 14px; }
-  .contact-card h3 { font-size: 0.95rem; color: #c9a44c; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .contact-card p { font-size: 0.95rem; word-break: break-word; }
-  .contact-card a.btn-inline { display: inline-block; margin-top: 12px; background: #c9a44c; color: #0b2545; padding: 8px 18px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; }
+  .contact-icon { font-size: 1.7rem; margin-bottom: 12px; }
+  .contact-card h3 { font-size: 0.9rem; color: #c9a44c; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-card p { font-size: 0.88rem; word-break: break-word; }
+  .contact-card a.btn-inline { display: inline-block; margin-top: 12px; background: #c9a44c; color: #0b2545; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.78rem; }
 
   footer { background: #081a30; color: #7d92b2; text-align: center; padding: 30px 24px; font-size: 0.8rem; }
   footer strong { color: #c9a44c; }
 
   @media (max-width: 800px) {
-    .nav-links { display: none; }
-    .nav-toggle { display: block; }
+    .nav-links { gap: 14px; }
+    .nav-links a:not(.nav-cta) { display: none; }
     .about-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 1.8rem; }
+    .machine-photos { grid-template-columns: 1fr; }
+    .qc-block { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.7rem; }
   }
 </style>
 </head>
@@ -109,7 +136,10 @@
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">RI YUE XING <span>精密工業</span></div>
+    <div class="nav-brand">
+      <img src="assets/logo.png" alt="RI YUE XING logo">
+      <div class="nav-logo">RI YUE XING<span>PRECISION INDUSTRIAL</span></div>
+    </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#capabilities">Capabilities</a>
@@ -121,14 +151,16 @@
 </nav>
 
 <header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Taiwan · Since 1987</div>
-    <h1>Precision CNC Turned Parts,<br>Ø2mm to Ø20mm, ±0.01mm Tolerance</h1>
-    <p>RI YUE XING Precision Industrial Co., Ltd. manufactures Swiss-type and automatic-lathe turned components for connector, medical, fluid power and automotive industries worldwide.</p>
+    <div class="hero-eyebrow">Kaohsiung, Taiwan · Since 1987</div>
+    <h1>Precision CNC Turned Parts,<br>Ø1mm to Ø20mm, ±0.01mm Tolerance</h1>
+    <p>RI YUE XING Precision Industrial Co., Ltd. manufactures Swiss-type and automatic-lathe turned components for connector, fastener, automotive, MRO and aerospace supply chains worldwide.</p>
     <div class="hero-stats">
       <div class="hero-stat"><b>1987</b><span>Founded</span></div>
       <div class="hero-stat"><b>±0.01mm</b><span>Tolerance</span></div>
-      <div class="hero-stat"><b>Ø2–20mm</b><span>Part Range</span></div>
+      <div class="hero-stat"><b>Ø1–20mm</b><span>Part Range</span></div>
       <div class="hero-stat"><b>6</b><span>Export Markets</span></div>
     </div>
     <div class="btn-group">
@@ -144,14 +176,17 @@
       <div class="about-text">
         <div class="eyebrow">About Us</div>
         <h2 style="font-size:1.7rem;color:#0b2545;margin-bottom:16px;font-weight:700;">A trusted Taiwan CNC manufacturer since 1987</h2>
-        <p>RI YUE XING Precision Industrial Co., Ltd. has specialized in precision CNC turning for over three decades. We operate Swiss-type CNC turning, automatic lathes, CNC milling and secondary operations to produce small, high-tolerance components for global customers.</p>
-        <p>We work with stainless steel, brass, copper and aluminum, delivering parts in the Ø2mm–Ø20mm range with tolerances as tight as ±0.01mm — built for industries where precision is non-negotiable.</p>
+        <p>Established in 1987 and located in Kaohsiung, Taiwan, RI YUE XING is a leader in manufacturing CNC lathe components with our own CNC composite processing facility. We operate travelling-spindle CNC lathes, travelling tools and CAM-type precision automatic lathes to process iron, steel, stainless steel, copper, aluminum and titanium.</p>
+        <p>We specialize in producing a variety of metal hardware components and electronic connectors used in vehicles like cars, motorcycles, scooters and bicycles, as well as hydraulic and pneumatic fittings — combining competitive pricing with dependable, on-time delivery.</p>
+        <div class="about-facts">
+          <div class="fact-card"><b>1987</b><span>Established in Kaohsiung, Taiwan</span></div>
+          <div class="fact-card"><b>±0.01mm</b><span>Precision tolerance</span></div>
+          <div class="fact-card"><b>5 Materials</b><span>Steel / Stainless / Copper / Aluminum / Titanium</span></div>
+          <div class="fact-card"><b>5 Processes</b><span>Full in-house CNC capability</span></div>
+        </div>
       </div>
-      <div class="about-facts">
-        <div class="fact-card"><b>1987</b><span>Established in Taiwan</span></div>
-        <div class="fact-card"><b>±0.01mm</b><span>Precision tolerance</span></div>
-        <div class="fact-card"><b>4 Materials</b><span>Stainless / Brass / Copper / Aluminum</span></div>
-        <div class="fact-card"><b>5 Processes</b><span>Full in-house CNC capability</span></div>
+      <div class="about-img">
+        <img src="assets/about-worker.jpg" alt="RI YUE XING CNC operator at work">
       </div>
     </div>
   </div>
@@ -162,7 +197,7 @@
     <div class="section-header">
       <div class="eyebrow">Capabilities</div>
       <h2>Full In-House CNC Manufacturing</h2>
-      <p>From raw bar stock to finished precision components, all core processes are performed in-house.</p>
+      <p>Standard 4-axis multiple-machining capability in a single CNC automatic lathe, from raw bar stock to finished precision components.</p>
     </div>
     <div class="capabilities-grid">
       <div class="cap-card">
@@ -192,9 +227,45 @@
       </div>
     </div>
     <div class="spec-bar">
-      <div class="spec-item"><b>Materials</b><span>Stainless Steel / Brass / Copper / Aluminum</span></div>
-      <div class="spec-item"><b>Part Diameter</b><span>Ø2mm ~ Ø20mm</span></div>
+      <div class="spec-item"><b>Materials</b><span>Steel / Stainless / Copper / Aluminum / Titanium</span></div>
+      <div class="spec-item"><b>Part Diameter</b><span>Ø1mm ~ Ø20mm</span></div>
       <div class="spec-item"><b>Tolerance</b><span>±0.01mm</span></div>
+    </div>
+
+    <div class="brand-strip">
+      <div class="eyebrow">Equipped with Japanese-Brand CNC Machines</div>
+      <div class="brand-logos">
+        <img src="assets/brand-cincom.png" alt="Citizen Cincom">
+        <img src="assets/brand-tsugami.png" alt="Tsugami">
+        <img src="assets/brand-star.png" alt="Star Micronics">
+        <span class="miyano">MIYANO</span>
+      </div>
+    </div>
+
+    <div class="machine-photos">
+      <figure>
+        <img src="assets/capability-tsugami.jpg" alt="Tsugami CNC lathe on the shop floor">
+        <figcaption>TSUGAMI CNC automatic lathe — automatic bar feeder, OD range 1–20mm</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/capability-cincom.jpg" alt="Citizen Cincom B12 CNC lathes">
+        <figcaption>CITIZEN Cincom B12 Swiss-type CNC lathes in production</figcaption>
+      </figure>
+    </div>
+
+    <div class="qc-block">
+      <img src="assets/qc-measurement.jpg" alt="Quality inspection with Mitutoyo digital micrometer">
+      <div>
+        <h3>Quality Control on Every Batch</h3>
+        <p style="color:#566173;font-size:0.92rem;margin-bottom:16px;">Every production run is verified against drawing tolerances using calibrated measurement instruments before shipment.</p>
+        <ul>
+          <li>2D Coordinate Measuring Machine</li>
+          <li>Calipers</li>
+          <li>Pin Gauges / Thread Plug Gauges</li>
+          <li>Precision Micrometers</li>
+          <li>Digital Height Gauge</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -203,41 +274,39 @@
   <div class="container">
     <div class="section-header">
       <div class="eyebrow">Products</div>
-      <h2>Precision Components by Industry</h2>
-      <p>Serving connector, medical, fluid power, sensor, electronic and automotive applications.</p>
+      <h2>Precision Components, Fully Customized</h2>
+      <p>Brass inserts, pins, fasteners, nuts, washers, screws and precision CNC lathed parts — built to your drawing and specification.</p>
     </div>
-    <div class="products-grid">
-      <div class="prod-card">
-        <h3>🔌 Connector Components</h3>
-        <ul>
-          <li>Connector Pins</li>
-          <li>Contact Pins</li>
-          <li>Terminals</li>
-        </ul>
-      </div>
-      <div class="prod-card">
-        <h3>🏥 Medical Components</h3>
-        <ul>
-          <li>Medical Connector Contacts</li>
-          <li>Precision Shafts</li>
-          <li>Custom medical turned parts</li>
-        </ul>
-      </div>
-      <div class="prod-card">
-        <h3>⚙️ Fluid Power Components</h3>
-        <ul>
-          <li>Pneumatic Components</li>
-          <li>Hydraulic Components</li>
-          <li>Bushings</li>
-        </ul>
-      </div>
-      <div class="prod-card">
-        <h3>🚗 Sensor / Electronic / Automotive</h3>
-        <ul>
-          <li>Sensor Components</li>
-          <li>Electronic Components</li>
-          <li>Automotive Components</li>
-        </ul>
+    <div class="products-banner">
+      <img src="assets/products-grid.jpg" alt="RI YUE XING precision CNC turned product range">
+    </div>
+    <div class="products-list">
+      <div class="prod-pill">CNC Turning Parts</div>
+      <div class="prod-pill">Pins & Dowels</div>
+      <div class="prod-pill">Inserts & Thread Parts</div>
+      <div class="prod-pill">Special Fasteners</div>
+      <div class="prod-pill">Shafts & Rods</div>
+      <div class="prod-pill">Washers & Spacers</div>
+      <div class="prod-pill">Precision Shafts</div>
+      <div class="prod-pill">Bolts & Studs</div>
+      <div class="prod-pill">Nuts & Threaded Parts</div>
+      <div class="prod-pill">Brass Components</div>
+      <div class="prod-pill">Brass Fittings</div>
+      <div class="prod-pill">Precision Connectors</div>
+      <div class="prod-pill">Brass Precision Parts</div>
+      <div class="prod-pill">Stainless Steel Parts</div>
+      <div class="prod-pill">Aluminum Components</div>
+    </div>
+
+    <div class="industries-strip">
+      <div class="eyebrow">Industries We Serve</div>
+      <div class="industries-grid">
+        <div class="industry-card"><div class="ico">🏭</div><span>Industrial Equipment</span></div>
+        <div class="industry-card"><div class="ico">🚗</div><span>Automotive Industry</span></div>
+        <div class="industry-card"><div class="ico">🔌</div><span>Electronics Industry</span></div>
+        <div class="industry-card"><div class="ico">🛠️</div><span>MRO Supply</span></div>
+        <div class="industry-card"><div class="ico">✈️</div><span>Aerospace Supply Chain</span></div>
+        <div class="industry-card"><div class="ico">🔩</div><span>Fastener Industry</span></div>
       </div>
     </div>
   </div>
@@ -288,16 +357,21 @@
       </div>
       <div class="contact-card">
         <div class="contact-icon">📞</div>
-        <h3>Phone</h3>
-        <p>+886 987 860 149</p>
-        <a class="btn-inline" href="tel:+886987860149">Call Now</a>
+        <h3>Phone / Fax</h3>
+        <p>TEL +886-7-701-3498<br>FAX +886-7-701-9649</p>
+        <a class="btn-inline" href="tel:+88677013498">Call Now</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Factory Address</h3>
+        <p>No.77-1, Jiangshan Rd.,<br>Daliao Dist., Kaohsiung City 831, Taiwan (R.O.C.)</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <strong>RI YUE XING PRECISION INDUSTRIAL CO., LTD.</strong>（日月星精密工業）｜ Taiwan, since 1987<br>
+  <strong>RI YUE XING PRECISION INDUSTRIAL CO., LTD.</strong>（日月星精密工業有限公司）｜ Kaohsiung, Taiwan, since 1987<br>
   © 2026 RI YUE XING Precision Industrial. All rights reserved.
 </footer>
 
