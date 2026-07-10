@@ -199,7 +199,7 @@ CONTACT_SECTION = """<section id="contact">
     <div class="section-header">
       <div class="eyebrow">Get In Touch</div>
       <h2>Request a Quote for This Product</h2>
-      <p>Send us your drawing and specification — our team responds within 1–2 business days.</p>
+      <p>Send us your drawing and specification — our team responds promptly.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card">
@@ -301,7 +301,7 @@ def render_product_page(p):
         {tag_list(p["materials"])}
       </div>
       <div class="side-card">
-        <h3>Industries Served</h3>
+        <h3>Target Industries</h3>
         {tag_list(p["industries"])}
       </div>
       <div class="side-card">
