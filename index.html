@@ -3,134 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RI YUE XING Precision Industrial | Taiwan CNC Precision Turned Parts</title>
-<meta name="description" content="RI YUE XING Precision Industrial Co., Ltd. — Taiwan CNC Swiss-type turning manufacturer since 1987. Precision turned parts Ø1-20mm for connector, fastener, automotive and MRO industries.">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif; color: #1c2733; line-height: 1.6; background: #fff; }
-  a { text-decoration: none; color: inherit; }
-  img { max-width: 100%; display: block; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-  /* Nav */
-  nav { position: sticky; top: 0; z-index: 100; background: #0b2545; border-bottom: 1px solid rgba(201,164,76,0.3); }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; max-width: 1100px; margin: 0 auto; }
-  .nav-brand { display: flex; align-items: center; gap: 10px; }
-  .nav-brand img { width: 38px; height: 38px; }
-  .nav-logo { color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; line-height: 1.2; }
-  .nav-logo span { display: block; color: #c9a44c; font-size: 0.68rem; font-weight: 500; letter-spacing: 1px; }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a { color: #c9d6e8; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: #c9a44c; }
-  .nav-cta { background: #c9a44c; color: #0b2545 !important; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; }
-
-  /* Hero */
-  .hero { position: relative; color: #fff; padding: 100px 24px 90px; text-align: center; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background-image: url('assets/hero-factory.jpg'); background-size: cover; background-position: center; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,26,48,0.94) 0%, rgba(11,37,69,0.92) 55%, rgba(18,58,107,0.88) 100%); }
-  .hero-content { position: relative; max-width: 780px; margin: 0 auto; }
-  .hero-eyebrow { color: #c9a44c; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
-  .hero h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
-  .hero p { font-size: 1.05rem; color: #c9d6e8; margin-bottom: 34px; }
-  .hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 38px; }
-  .hero-stat b { display: block; font-size: 1.8rem; color: #c9a44c; font-weight: 700; }
-  .hero-stat span { font-size: 0.78rem; color: #a8bcd8; text-transform: uppercase; letter-spacing: 0.5px; }
-  .btn-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 13px 28px; border-radius: 6px; font-weight: 700; font-size: 0.92rem; transition: all 0.2s; }
-  .btn-primary { background: #c9a44c; color: #0b2545; }
-  .btn-primary:hover { background: #ddb85f; transform: translateY(-1px); }
-  .btn-secondary { border: 1px solid rgba(255,255,255,0.4); color: #fff; }
-  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-
-  /* Section generic */
-  section { padding: 72px 24px; }
-  .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
-  .eyebrow { color: #c9a44c; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
-  .section-header h2 { font-size: 1.9rem; font-weight: 700; color: #0b2545; margin-bottom: 14px; }
-  .section-header p { color: #566173; font-size: 0.98rem; }
-
-  /* About */
-  #about { background: #f7f9fc; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; max-width: 1050px; margin: 0 auto; }
-  .about-text p { color: #414d5e; margin-bottom: 16px; font-size: 0.98rem; }
-  .about-img { border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px rgba(11,37,69,0.15); }
-  .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
-  .fact-card { background: #fff; border: 1px solid #e5eaf0; border-radius: 10px; padding: 18px; }
-  .fact-card b { display: block; color: #0b2545; font-size: 1rem; margin-bottom: 4px; }
-  .fact-card span { font-size: 0.8rem; color: #708098; }
-
-  /* Capabilities */
-  .capabilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1050px; margin: 0 auto; }
-  .cap-card { border: 1px solid #e5eaf0; border-radius: 12px; padding: 26px 22px; transition: box-shadow 0.2s, border-color 0.2s; }
-  .cap-card:hover { box-shadow: 0 8px 24px rgba(11,37,69,0.08); border-color: #c9a44c; }
-  .cap-icon { width: 44px; height: 44px; border-radius: 10px; background: #0b2545; color: #c9a44c; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; font-weight: 700; }
-  .cap-card h3 { font-size: 1.02rem; color: #0b2545; margin-bottom: 8px; }
-  .cap-card p { font-size: 0.86rem; color: #647082; }
-  .spec-bar { max-width: 1050px; margin: 44px auto 0; background: #0b2545; border-radius: 12px; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; }
-  .spec-item { color: #fff; flex: 1; min-width: 180px; }
-  .spec-item b { display: block; color: #c9a44c; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-  .spec-item span { font-size: 1rem; font-weight: 600; }
-
-  .brand-strip { max-width: 1050px; margin: 50px auto 0; text-align: center; }
-  .brand-strip .eyebrow { margin-bottom: 20px; }
-  .brand-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-  .brand-logos img { height: 42px; width: auto; opacity: 0.85; filter: grayscale(15%); }
-  .brand-logos span.miyano { font-weight: 700; font-size: 1.3rem; color: #333; font-style: italic; }
-
-  .machine-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1050px; margin: 50px auto 0; }
-  .machine-photos figure { border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(11,37,69,0.1); }
-  .machine-photos figcaption { background: #0b2545; color: #c9d6e8; font-size: 0.78rem; padding: 10px 16px; }
-
-  .qc-block { display: grid; grid-template-columns: 1fr 1.1fr; gap: 44px; align-items: center; max-width: 1050px; margin: 60px auto 0; background: #f7f9fc; border-radius: 16px; padding: 36px; }
-  .qc-block img { border-radius: 12px; box-shadow: 0 10px 28px rgba(11,37,69,0.12); }
-  .qc-block h3 { color: #0b2545; font-size: 1.25rem; margin-bottom: 14px; }
-  .qc-block ul { list-style: none; }
-  .qc-block li { font-size: 0.9rem; color: #414d5e; padding: 6px 0; padding-left: 20px; position: relative; }
-  .qc-block li::before { content: '✓'; position: absolute; left: 0; color: #c9a44c; font-weight: 700; }
-
-  /* Products */
-  #products { background: #f7f9fc; }
-  .products-banner { max-width: 1050px; margin: 0 auto 40px; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px rgba(11,37,69,0.15); }
-  .products-list { max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
-  .prod-pill { background: #fff; border-left: 4px solid #c9a44c; border-radius: 8px; padding: 14px 18px; font-size: 0.88rem; font-weight: 600; color: #0b2545; box-shadow: 0 2px 8px rgba(11,37,69,0.05); }
-
-  .industries-strip { max-width: 1050px; margin: 50px auto 0; }
-  .industries-strip .eyebrow { text-align: center; margin-bottom: 24px; }
-  .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
-  .industry-card { background: #fff; border-radius: 10px; padding: 20px 14px; text-align: center; box-shadow: 0 2px 8px rgba(11,37,69,0.05); }
-  .industry-card .ico { font-size: 1.6rem; margin-bottom: 10px; }
-  .industry-card span { font-size: 0.82rem; font-weight: 600; color: #33404f; }
-
-  /* Markets */
-  .markets-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; max-width: 900px; margin: 0 auto; }
-  .market-pill { background: #fff; border: 1.5px solid #0b2545; color: #0b2545; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.9rem; }
-  .market-arrow { color: #c9a44c; font-size: 1.1rem; }
-
-  /* Contact */
-  #contact { background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%); color: #fff; }
-  #contact .section-header h2 { color: #fff; }
-  #contact .section-header p { color: #c9d6e8; }
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
-  .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,164,76,0.3); border-radius: 12px; padding: 26px 20px; text-align: center; transition: background 0.2s; }
-  .contact-card:hover { background: rgba(255,255,255,0.1); }
-  .contact-icon { font-size: 1.7rem; margin-bottom: 12px; }
-  .contact-card h3 { font-size: 0.9rem; color: #c9a44c; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .contact-card p { font-size: 0.88rem; word-break: break-word; }
-  .contact-card a.btn-inline { display: inline-block; margin-top: 12px; background: #c9a44c; color: #0b2545; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.78rem; }
-
-  footer { background: #081a30; color: #7d92b2; text-align: center; padding: 30px 24px; font-size: 0.8rem; }
-  footer strong { color: #c9a44c; }
-
-  @media (max-width: 800px) {
-    .nav-links { gap: 14px; }
-    .nav-links a:not(.nav-cta) { display: none; }
-    .about-grid { grid-template-columns: 1fr; }
-    .machine-photos { grid-template-columns: 1fr; }
-    .qc-block { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 1.7rem; }
-  }
-</style>
+<title>RI YUE XING Precision Industrial | OEM/ODM CNC Machining Taiwan</title>
+<meta name="description" content="RI YUE XING Precision Industrial Co., Ltd. — Taiwan OEM/ODM precision CNC machining manufacturer since 1987. Swiss-type turning, CNC milling and 5-axis machining for components under Ø20mm, ±0.01mm tolerance.">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -143,8 +18,8 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#capabilities">Capabilities</a>
-      <a href="#products">Products</a>
-      <a href="#markets">Markets</a>
+      <a href="products/index.html">Products</a>
+      <a href="#industries">Industries</a>
       <a href="#contact" class="nav-cta">Contact Us</a>
     </div>
   </div>
@@ -154,18 +29,18 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Kaohsiung, Taiwan · Since 1987</div>
-    <h1>Precision CNC Turned Parts,<br>Ø1mm to Ø20mm, ±0.01mm Tolerance</h1>
-    <p>RI YUE XING Precision Industrial Co., Ltd. manufactures Swiss-type and automatic-lathe turned components for connector, fastener, automotive, MRO and aerospace supply chains worldwide.</p>
+    <div class="hero-eyebrow">OEM / ODM Precision CNC Machining · Kaohsiung, Taiwan · Since 1987</div>
+    <h1>Precision CNC Components,<br>Built to Your Drawing</h1>
+    <p>RI YUE XING manufactures precision CNC turned and milled components — Ø1mm to Ø20mm, ±0.01mm tolerance — that become critical parts inside our customers' industrial, automotive, electronics, fastener and aerospace products. A long-term OEM/ODM manufacturing partner from Taiwan.</p>
     <div class="hero-stats">
       <div class="hero-stat"><b>1987</b><span>Founded</span></div>
       <div class="hero-stat"><b>±0.01mm</b><span>Tolerance</span></div>
-      <div class="hero-stat"><b>Ø1–20mm</b><span>Part Range</span></div>
-      <div class="hero-stat"><b>6</b><span>Export Markets</span></div>
+      <div class="hero-stat"><b>Under Ø20mm</b><span>Part Range</span></div>
+      <div class="hero-stat"><b>15+</b><span>Product Categories</span></div>
     </div>
     <div class="btn-group">
       <a href="#contact" class="btn btn-primary">Request a Quote</a>
-      <a href="#products" class="btn btn-secondary">View Products</a>
+      <a href="products/index.html" class="btn btn-secondary">View Products</a>
     </div>
   </div>
 </header>
@@ -175,14 +50,14 @@
     <div class="about-grid">
       <div class="about-text">
         <div class="eyebrow">About Us</div>
-        <h2 style="font-size:1.7rem;color:#0b2545;margin-bottom:16px;font-weight:700;">A trusted Taiwan CNC manufacturer since 1987</h2>
-        <p>Established in 1987 and located in Kaohsiung, Taiwan, RI YUE XING is a leader in manufacturing CNC lathe components with our own CNC composite processing facility. We operate travelling-spindle CNC lathes, travelling tools and CAM-type precision automatic lathes to process iron, steel, stainless steel, copper, aluminum and titanium.</p>
-        <p>We specialize in producing a variety of metal hardware components and electronic connectors used in vehicles like cars, motorcycles, scooters and bicycles, as well as hydraulic and pneumatic fittings — combining competitive pricing with dependable, on-time delivery.</p>
+        <h2 style="font-size:1.7rem;color:#0b2545;margin-bottom:16px;font-weight:700;">An OEM/ODM precision CNC manufacturer since 1987</h2>
+        <p>Established in 1987 and located in Kaohsiung, Taiwan, RI YUE XING PRECISION INDUSTRIAL CO., LTD. specializes in precision CNC turning and milling for components under Ø20mm. We do not manufacture finished products — we manufacture the precision CNC machined components that become critical parts inside our customers' products, according to their drawings and specifications.</p>
+        <p>Our in-house capability spans Swiss-type CNC turning, CNC turning, CNC milling, 5-axis machining and precision secondary processing, working in stainless steel, aluminum, brass, copper, titanium and other engineering metals — supporting both OEM production and ODM development with stable, long-term mass production.</p>
         <div class="about-facts">
           <div class="fact-card"><b>1987</b><span>Established in Kaohsiung, Taiwan</span></div>
           <div class="fact-card"><b>±0.01mm</b><span>Precision tolerance</span></div>
-          <div class="fact-card"><b>5 Materials</b><span>Steel / Stainless / Copper / Aluminum / Titanium</span></div>
-          <div class="fact-card"><b>5 Processes</b><span>Full in-house CNC capability</span></div>
+          <div class="fact-card"><b>6 Materials</b><span>Stainless / Aluminum / Brass / Copper / Titanium / Engineering Metals</span></div>
+          <div class="fact-card"><b>OEM / ODM</b><span>Custom manufacturing, not catalog parts</span></div>
         </div>
       </div>
       <div class="about-img">
@@ -197,7 +72,7 @@
     <div class="section-header">
       <div class="eyebrow">Capabilities</div>
       <h2>Full In-House CNC Manufacturing</h2>
-      <p>Standard 4-axis multiple-machining capability in a single CNC automatic lathe, from raw bar stock to finished precision components.</p>
+      <p>From raw bar stock to finished precision components — standard 4-axis multiple-machining capability in a single CNC automatic lathe.</p>
     </div>
     <div class="capabilities-grid">
       <div class="cap-card">
@@ -222,14 +97,24 @@
       </div>
       <div class="cap-card">
         <div class="cap-icon">05</div>
+        <h3>5-Axis Machining</h3>
+        <p>Complex geometries in a single setup for tight-tolerance parts.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon">06</div>
         <h3>Secondary Operations</h3>
         <p>Plating, polishing, deburring and custom finishing.</p>
       </div>
     </div>
     <div class="spec-bar">
-      <div class="spec-item"><b>Materials</b><span>Steel / Stainless / Copper / Aluminum / Titanium</span></div>
-      <div class="spec-item"><b>Part Diameter</b><span>Ø1mm ~ Ø20mm</span></div>
+      <div class="spec-item"><b>Materials</b><span>Stainless Steel / Aluminum / Brass / Copper / Titanium</span></div>
+      <div class="spec-item"><b>Part Diameter</b><span>Under Ø20mm</span></div>
       <div class="spec-item"><b>Tolerance</b><span>±0.01mm</span></div>
+    </div>
+    <div class="model-strip">
+      <div class="model-card"><b>OEM Production</b><span>Manufactured to your specification</span></div>
+      <div class="model-card"><b>ODM Development</b><span>Collaborative design & development</span></div>
+      <div class="model-card"><b>Stable Mass Production</b><span>Flexible MOQ, long-term supply</span></div>
     </div>
 
     <div class="brand-strip">
@@ -256,8 +141,8 @@
     <div class="qc-block">
       <img src="assets/qc-measurement.jpg" alt="Quality inspection with Mitutoyo digital micrometer">
       <div>
-        <h3>Quality Control on Every Batch</h3>
-        <p style="color:#566173;font-size:0.92rem;margin-bottom:16px;">Every production run is verified against drawing tolerances using calibrated measurement instruments before shipment.</p>
+        <h3>Quality Assurance on Every Batch</h3>
+        <p style="color:#566173;font-size:0.92rem;margin-bottom:16px;">Every production run passes First Article Inspection, In-Process Inspection, 100% Final Inspection and CMM measurement against drawing tolerances before shipment.</p>
         <ul>
           <li>2D Coordinate Measuring Machine</li>
           <li>Calipers</li>
@@ -275,39 +160,70 @@
     <div class="section-header">
       <div class="eyebrow">Products</div>
       <h2>Precision Components, Fully Customized</h2>
-      <p>Brass inserts, pins, fasteners, nuts, washers, screws and precision CNC lathed parts — built to your drawing and specification.</p>
+      <p>Brass inserts, pins, fasteners, nuts, washers, screws and precision CNC lathed parts — manufactured to your drawing and specification, not sold as catalog parts.</p>
     </div>
     <div class="products-banner">
       <img src="assets/products-grid.jpg" alt="RI YUE XING precision CNC turned product range">
     </div>
     <div class="products-list">
-      <div class="prod-pill">CNC Turning Parts</div>
-      <div class="prod-pill">Pins & Dowels</div>
-      <div class="prod-pill">Inserts & Thread Parts</div>
-      <div class="prod-pill">Special Fasteners</div>
-      <div class="prod-pill">Shafts & Rods</div>
-      <div class="prod-pill">Washers & Spacers</div>
-      <div class="prod-pill">Precision Shafts</div>
-      <div class="prod-pill">Bolts & Studs</div>
-      <div class="prod-pill">Nuts & Threaded Parts</div>
-      <div class="prod-pill">Brass Components</div>
-      <div class="prod-pill">Brass Fittings</div>
-      <div class="prod-pill">Precision Connectors</div>
-      <div class="prod-pill">Brass Precision Parts</div>
-      <div class="prod-pill">Stainless Steel Parts</div>
-      <div class="prod-pill">Aluminum Components</div>
+      <a class="prod-pill" href="products/cnc-turning-parts.html">CNC Turning Parts</a>
+      <a class="prod-pill" href="products/pins-dowels.html">Pins & Dowels</a>
+      <a class="prod-pill" href="products/inserts-thread-parts.html">Inserts & Thread Parts</a>
+      <a class="prod-pill" href="products/special-fasteners.html">Special Fasteners</a>
+      <a class="prod-pill" href="products/shafts-rods.html">Shafts & Rods</a>
+      <a class="prod-pill" href="products/washers-spacers.html">Washers & Spacers</a>
+      <a class="prod-pill" href="products/precision-shafts.html">Precision Shafts</a>
+      <a class="prod-pill" href="products/bolts-studs.html">Bolts & Studs</a>
+      <a class="prod-pill" href="products/nuts-threaded-parts.html">Nuts & Threaded Parts</a>
+      <a class="prod-pill" href="products/brass-components.html">Brass Components</a>
+      <a class="prod-pill" href="products/brass-fittings.html">Brass Fittings</a>
+      <a class="prod-pill" href="products/precision-connectors.html">Precision Connectors</a>
+      <a class="prod-pill" href="products/brass-precision-parts.html">Brass Precision Parts</a>
+      <a class="prod-pill" href="products/stainless-steel-parts.html">Stainless Steel Parts</a>
+      <a class="prod-pill" href="products/aluminum-components.html">Aluminum Components</a>
     </div>
+    <div class="view-all-wrap">
+      <a href="products/index.html" class="btn btn-primary" style="background:#0b2545;color:#fff;">View All Product Details →</a>
+    </div>
+  </div>
+</section>
 
-    <div class="industries-strip">
+<section id="industries">
+  <div class="container">
+    <div class="section-header">
       <div class="eyebrow">Industries We Serve</div>
-      <div class="industries-grid">
-        <div class="industry-card"><div class="ico">🏭</div><span>Industrial Equipment</span></div>
-        <div class="industry-card"><div class="ico">🚗</div><span>Automotive Industry</span></div>
-        <div class="industry-card"><div class="ico">🔌</div><span>Electronics Industry</span></div>
-        <div class="industry-card"><div class="ico">🛠️</div><span>MRO Supply</span></div>
-        <div class="industry-card"><div class="ico">✈️</div><span>Aerospace Supply Chain</span></div>
-        <div class="industry-card"><div class="ico">🔩</div><span>Fastener Industry</span></div>
-      </div>
+      <h2>Components Inside Your Products</h2>
+      <p>RI YUE XING's precision components become critical parts across these industries.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card"><div class="ico">🏭</div><b>Industrial Equipment</b><span>Shafts, pins, washers, threaded parts for factory automation, packaging machines, machine tools</span></div>
+      <div class="industry-card"><div class="ico">🚗</div><b>Automotive Industry</b><span>Shafts, bolts, fasteners, spacers for engine, brake and steering systems, sensors</span></div>
+      <div class="industry-card"><div class="ico">🔌</div><b>Electronics Industry</b><span>Connector pins, brass inserts, thread parts for connectors, industrial computers, network equipment</span></div>
+      <div class="industry-card"><div class="ico">🩺</div><b>Medical Devices</b><span>Stainless steel shafts, connector parts, precision pins for surgical & diagnostic equipment</span></div>
+      <div class="industry-card"><div class="ico">💧</div><b>Pneumatic & Hydraulic</b><span>Brass fittings, threaded parts, precision connectors for compressors and fluid control systems</span></div>
+      <div class="industry-card"><div class="ico">✈️</div><b>Aerospace Supply Chain</b><span>Aluminum components, precision fasteners and shafts for UAV and aircraft interior parts</span></div>
+      <div class="industry-card"><div class="ico">🛠️</div><b>MRO Supply</b><span>Replacement precision components for maintenance, repair and operations programs</span></div>
+      <div class="industry-card"><div class="ico">🔩</div><b>Fastener Industry</b><span>Custom bolts, nuts, inserts and specialty fasteners manufactured to spec</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" style="background:#f7f9fc;">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Why Choose RI YUE XING</div>
+      <h2>A Long-Term Manufacturing Partner</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><span class="mark">✓</span> Established since 1987</div>
+      <div class="why-card"><span class="mark">✓</span> Made in Taiwan</div>
+      <div class="why-card"><span class="mark">✓</span> OEM / ODM manufacturing</div>
+      <div class="why-card"><span class="mark">✓</span> Components under Ø20mm, ±0.01mm tolerance</div>
+      <div class="why-card"><span class="mark">✓</span> Swiss-type turning, CNC milling, 5-axis machining</div>
+      <div class="why-card"><span class="mark">✓</span> Flexible MOQ</div>
+      <div class="why-card"><span class="mark">✓</span> Stable mass production capacity</div>
+      <div class="why-card"><span class="mark">✓</span> FAI / In-process / 100% final / CMM inspection</div>
+      <div class="why-card"><span class="mark">✓</span> Fast response, reliable delivery</div>
     </div>
   </div>
 </section>
@@ -373,6 +289,7 @@
 <footer>
   <strong>RI YUE XING PRECISION INDUSTRIAL CO., LTD.</strong>（日月星精密工業有限公司）｜ Kaohsiung, Taiwan, since 1987<br>
   © 2026 RI YUE XING Precision Industrial. All rights reserved.
+  <div class="foot-links"><a href="products/index.html">All Products</a>｜<a href="#contact">Contact</a></div>
 </footer>
 
 </body>
