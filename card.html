@@ -251,6 +251,34 @@ body {
 .social-btn:hover { background: #e8edf5; }
 .social-icon { font-size: 20px; }
 
+/* -- qr -- */
+.qr-section {
+  padding: 16px 24px 20px;
+  text-align: center;
+  border-top: 1px solid #eef1f6;
+}
+.qr-section img {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #d9e0ec;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+}
+.qr-caption {
+  font-size: 11px;
+  color: #99a4b8;
+  margin-top: 8px;
+}
+.qr-download {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #0b2545;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* -- footer -- */
 .footer {
   background: #0b2545;
@@ -376,6 +404,13 @@ body {
       <span class="social-icon">✉️</span>
       <span>Email</span>
     </a>
+  </div>
+
+  <!-- qr -->
+  <div class="qr-section">
+    <img src="assets/card-qrcode.png" alt="QR code linking to this digital business card">
+    <div class="qr-caption">Scan to share this card</div>
+    <a class="qr-download" href="assets/card-qrcode.png" download>Download QR Code</a>
   </div>
 
   <!-- footer -->
