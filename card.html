@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>RI YUE XING | Andrea Chang — Digital Business Card</title>
+<meta name="description" content="RI YUE XING Precision Industrial — Andrea Chang, Sales Manager. OEM/ODM CNC precision machining, Kaohsiung, Taiwan, since 1987.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+  background: #eef1f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 40px 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(11,37,69,.15);
+  overflow: hidden;
+}
+
+/* -- top bar -- */
+.top-bar {
+  background: #0b2545;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.top-brand {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.top-area {
+  font-size: 10.5px;
+  color: rgba(255,255,255,.75);
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* -- hero -- */
+.hero {
+  position: relative;
+  background: linear-gradient(to bottom, #e8edf5 0%, #fff 100%);
+  padding: 28px 20px 0 20px;
+  text-align: center;
+}
+.hero-photo {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 24px rgba(11,37,69,.2);
+  display: block;
+  margin: 0 auto;
+  padding: 14px;
+}
+
+/* -- identity -- */
+.identity {
+  padding: 18px 24px 4px;
+  text-align: center;
+}
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b2545;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.name-sub {
+  font-size: 12.5px;
+  color: #8a97ab;
+  letter-spacing: 1px;
+}
+.title {
+  font-size: 13.5px;
+  color: #33465e;
+  margin-top: 6px;
+}
+
+/* -- slogan -- */
+.slogan {
+  margin: 16px 24px;
+  background: #0b2545;
+  border-radius: 10px;
+  padding: 14px 20px;
+  text-align: center;
+  color: #fff;
+}
+.slogan-main {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: .3px;
+}
+.slogan-sub {
+  font-size: 11.5px;
+  color: #c9a44c;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* -- tags -- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 24px 16px;
+  justify-content: center;
+}
+.tag {
+  background: #f4f6fa;
+  border: 1px solid #d9e0ec;
+  color: #0b2545;
+  font-size: 11.5px;
+  padding: 5px 13px;
+  border-radius: 20px;
+}
+
+/* -- booking -- */
+.booking-section {
+  margin: 0 20px 20px;
+  border: 1.5px solid #d9e0ec;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.booking-header {
+  background: #0b2545;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.booking-header-title {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: bold;
+  flex: 1;
+}
+.booking-header-sub {
+  color: rgba(255,255,255,.7);
+  font-size: 10.5px;
+}
+.booking-body { padding: 14px 14px 16px; }
+.booking-label {
+  font-size: 11.5px;
+  color: #5a6b85;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.date-chips {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  scrollbar-width: none;
+}
+.date-chips::-webkit-scrollbar { display: none; }
+.date-chip {
+  flex-shrink: 0;
+  background: #f4f6fa;
+  border: 1.5px solid #d9e0ec;
+  border-radius: 8px;
+  padding: 7px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .15s;
+  min-width: 50px;
+}
+.date-chip.active {
+  background: #0b2545;
+  border-color: #0b2545;
+  color: #fff;
+}
+.date-chip-day { font-size: 10.5px; color: #999; }
+.date-chip.active .date-chip-day { color: rgba(255,255,255,.8); }
+.date-chip-date { font-size: 15px; font-weight: bold; color: #0b2545; margin: 2px 0; }
+.date-chip.active .date-chip-date { color: #fff; }
+.date-chip-week { font-size: 9.5px; color: #8a97ab; }
+.date-chip.active .date-chip-week { color: #c9a44c; }
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-bottom: 6px;
+}
+.time-chip {
+  background: #f4f6fa;
+  border: 1.5px solid #d9e0ec;
+  border-radius: 7px;
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 12.5px;
+  color: #0b2545;
+  cursor: pointer;
+  transition: all .15s;
+}
+.time-chip.active {
+  background: #c9a44c;
+  border-color: #c9a44c;
+  color: #0b2545;
+  font-weight: bold;
+}
+.tz-note {
+  font-size: 10.5px;
+  color: #99a4b8;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.booking-confirm {
+  width: 100%;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 14.5px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.booking-confirm:hover { opacity: .88; }
+.booking-confirm:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.booking-note {
+  font-size: 10.5px;
+  color: #999;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* -- CTA -- */
+.cta-group {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.btn:hover { opacity: .88; }
+.btn-phone {
+  background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(11,37,69,.3);
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(37,211,102,.3);
+}
+.btn-web {
+  background: #fff;
+  color: #0b2545;
+  border: 2px solid #c9a44c;
+}
+.btn-products {
+  background: #fff;
+  color: #0b2545;
+  border: 2px solid #c9a44c;
+}
+
+/* -- contact list -- */
+.contact-list {
+  border-top: 1px solid #eef1f6;
+  padding: 16px 24px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f4f6fa;
+  text-decoration: none;
+  color: #0b2545;
+  font-size: 13.5px;
+}
+.contact-item:last-child { border-bottom: none; }
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  background: #f4f6fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.contact-text { flex: 1; }
+.contact-label {
+  font-size: 10.5px;
+  color: #99a4b8;
+  margin-bottom: 1px;
+}
+.contact-value {
+  font-size: 13.5px;
+  color: #0b2545;
+}
+
+/* -- social -- */
+.social-row {
+  padding: 16px 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-top: 1px solid #eef1f6;
+  flex-wrap: wrap;
+}
+.social-btn {
+  flex: 1;
+  min-width: 68px;
+  max-width: 100px;
+  background: #f4f6fa;
+  border: 1px solid #d9e0ec;
+  border-radius: 8px;
+  padding: 10px 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #0b2545;
+  font-size: 10.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background .15s;
+}
+.social-btn:hover { background: #e8edf5; }
+.social-icon { font-size: 20px; }
+
+/* -- footer -- */
+.footer {
+  background: #0b2545;
+  color: rgba(255,255,255,.65);
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- top brand bar -->
+  <div class="top-bar">
+    <div class="top-logo">
+      <img src="assets/logo.png" alt="RI YUE XING">
+      <div class="top-brand">RI YUE XING</div>
+    </div>
+    <div class="top-area">Kaohsiung, Taiwan<br>Since 1987</div>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <img class="hero-photo" src="assets/logo.png" alt="RI YUE XING Precision Industrial">
+  </div>
+
+  <!-- identity -->
+  <div class="identity">
+    <div class="name">Andrea Chang</div>
+    <div class="name-sub">張小姐 · Sales Manager</div>
+    <div class="title">RI YUE XING Precision Industrial Co., Ltd.</div>
+  </div>
+
+  <!-- slogan -->
+  <div class="slogan">
+    <div class="slogan-main">Precision CNC Components,<br>Built to Your Drawing</div>
+    <div class="slogan-sub">OEM / ODM Manufacturing Partner Since 1987</div>
+  </div>
+
+  <!-- tags -->
+  <div class="tags">
+    <span class="tag">⚙️ OEM / ODM</span>
+    <span class="tag">🔩 Swiss-Type CNC</span>
+    <span class="tag">📐 ±0.01mm Tolerance</span>
+    <span class="tag">🇹🇼 Made in Taiwan</span>
+  </div>
+
+  <!-- booking -->
+  <div class="booking-section">
+    <div class="booking-header">
+      <span style="font-size:18px">📅</span>
+      <div style="flex:1">
+        <div class="booking-header-title">Schedule a Call</div>
+        <div class="booking-header-sub">Pick a time, confirm via WhatsApp</div>
+      </div>
+    </div>
+    <div class="booking-body">
+      <div class="booking-label">SELECT DATE (WEEKDAYS)</div>
+      <div class="date-chips" id="dateChips"></div>
+      <div class="booking-label">SELECT TIME</div>
+      <div class="time-grid" id="timeGrid"></div>
+      <div class="tz-note">All times shown in Taiwan Time (GMT+8)</div>
+      <button class="booking-confirm" id="bookBtn" disabled onclick="sendBooking()">
+        💬 Send Request via WhatsApp
+      </button>
+      <div class="booking-note">Opens WhatsApp with your requested time pre-filled</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-group">
+    <a class="btn btn-whatsapp" href="https://wa.me/886987860149?text=Hi%20Andrea%2C%20I%27d%20like%20to%20inquire%20about%20RI%20YUE%20XING%27s%20CNC%20precision%20parts." target="_blank">
+      💬 Chat on WhatsApp
+    </a>
+    <a class="btn btn-phone" href="tel:+886987860149">
+      📞 Call +886 987 860 149
+    </a>
+    <a class="btn btn-web" href="index.html">
+      🌐 Visit Our Website
+    </a>
+    <a class="btn btn-products" href="products/index.html">
+      🔩 View Product Range
+    </a>
+  </div>
+
+  <!-- contact list -->
+  <div class="contact-list">
+    <a class="contact-item" href="tel:+886987860149">
+      <div class="contact-icon">📞</div>
+      <div class="contact-text">
+        <div class="contact-label">Mobile / WhatsApp</div>
+        <div class="contact-value">+886 987 860 149</div>
+      </div>
+    </a>
+    <a class="contact-item" href="tel:+88677013498">
+      <div class="contact-icon">☎️</div>
+      <div class="contact-text">
+        <div class="contact-label">Factory Tel</div>
+        <div class="contact-value">+886-7-701-3498</div>
+      </div>
+    </a>
+    <a class="contact-item" href="mailto:scnc3499@gmail.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-text">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">scnc3499@gmail.com</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://www.linkedin.com/in/riyuexing1987/" target="_blank">
+      <div class="contact-icon">🔗</div>
+      <div class="contact-text">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">RI YUE XING Precision Industrial</div>
+      </div>
+    </a>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-text">
+        <div class="contact-label">Factory Address</div>
+        <div class="contact-value">No.77-1, Jiangshan Rd., Daliao Dist., Kaohsiung City 831, Taiwan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- social -->
+  <div class="social-row">
+    <a class="social-btn" href="index.html">
+      <span class="social-icon">🌐</span>
+      <span>Website</span>
+    </a>
+    <a class="social-btn" href="https://wa.me/886987860149" target="_blank">
+      <span class="social-icon">💬</span>
+      <span>WhatsApp</span>
+    </a>
+    <a class="social-btn" href="https://www.linkedin.com/in/riyuexing1987/" target="_blank">
+      <span class="social-icon">🔗</span>
+      <span>LinkedIn</span>
+    </a>
+    <a class="social-btn" href="products/index.html">
+      <span class="social-icon">🔩</span>
+      <span>Products</span>
+    </a>
+    <a class="social-btn" href="mailto:scnc3499@gmail.com">
+      <span class="social-icon">✉️</span>
+      <span>Email</span>
+    </a>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">© RI YUE XING PRECISION INDUSTRIAL CO., LTD. · Since 1987</div>
+
+</div>
+<script>
+const WEEK = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const HOURS = ['09:00','10:00','11:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+
+let selDate = null, selTime = null;
+
+function buildDates() {
+  const container = document.getElementById('dateChips');
+  const today = new Date();
+  let added = 0, offset = 1;
+  while (added < 8) {
+    const d = new Date(today);
+    d.setDate(today.getDate() + offset);
+    const dow = d.getDay();
+    offset++;
+    if (dow === 0 || dow === 6) continue; // weekdays only
+    const chip = document.createElement('div');
+    chip.className = 'date-chip';
+    chip.innerHTML = `
+      <div class="date-chip-day">${d.getMonth()+1}/${d.getDate()}</div>
+      <div class="date-chip-date">${WEEK[dow]}</div>`;
+    chip.dataset.date = `${d.getMonth()+1}/${d.getDate()} (${WEEK[dow]})`;
+    chip.onclick = () => selectDate(chip);
+    container.appendChild(chip);
+    added++;
+  }
+}
+
+function buildTimes() {
+  const grid = document.getElementById('timeGrid');
+  grid.innerHTML = '';
+  HOURS.forEach(t => {
+    const chip = document.createElement('div');
+    chip.className = 'time-chip';
+    chip.textContent = t;
+    chip.dataset.time = t;
+    chip.onclick = () => selectTime(chip);
+    grid.appendChild(chip);
+  });
+}
+
+function selectDate(el) {
+  document.querySelectorAll('.date-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  selDate = el.dataset.date;
+  updateBtn();
+}
+
+function selectTime(el) {
+  document.querySelectorAll('.time-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  selTime = el.dataset.time;
+  updateBtn();
+}
+
+function updateBtn() {
+  const btn = document.getElementById('bookBtn');
+  btn.disabled = !(selDate && selTime);
+  btn.innerHTML = (selDate && selTime)
+    ? `💬 Request ${selDate} ${selTime}`
+    : '💬 Select a date and time first';
+}
+
+function sendBooking() {
+  const msg = `Hi Andrea, I found your digital card and would like to schedule a call on ${selDate} at ${selTime} (Taiwan Time) to discuss RI YUE XING's CNC precision parts. Would that work?`;
+  const btn = document.getElementById('bookBtn');
+  btn.innerHTML = '✅ Opening WhatsApp…';
+  const url = 'https://wa.me/886987860149?text=' + encodeURIComponent(msg);
+  setTimeout(() => { window.open(url, '_blank'); }, 300);
+  setTimeout(() => updateBtn(), 2500);
+}
+
+buildDates();
+buildTimes();
+</script>
+</body>
+</html>
