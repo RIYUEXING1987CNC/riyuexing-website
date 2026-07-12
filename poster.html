@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RI YUE XING | Print Poster — Andrea Chang</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Print target: 24in wide, height flows with content (roll/panel print — fix width, cut to length).
+   Confirm final width with your print vendor before output. */
+@page { size: 24in auto; margin: 0; }
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.poster {
+  width: 24in;
+  background: #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* -- top bar -- */
+.top-bar {
+  background: #0b2545;
+  padding: .5in .7in;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-logo { display: flex; align-items: center; gap: .25in; }
+.top-logo img { width: .9in; height: .9in; object-fit: contain; }
+.top-brand { color: #fff; font-size: 32px; font-weight: 800; letter-spacing: 3px; }
+.top-area { color: rgba(255,255,255,.8); font-size: 16px; text-align: right; line-height: 1.5; }
+
+/* -- hero -- */
+.hero {
+  background: linear-gradient(to bottom, #e8edf5 0%, #fff 100%);
+  text-align: center;
+  padding: .6in .7in .3in;
+}
+.hero-photo {
+  width: 2.6in; height: 2.6in;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 30px rgba(11,37,69,.2);
+  padding: .25in;
+  margin: 0 auto;
+}
+
+/* -- identity -- */
+.identity { text-align: center; padding: .3in .7in .1in; }
+.name { font-size: 44px; font-weight: 800; color: #0b2545; letter-spacing: 1px; }
+.name-sub { font-size: 20px; color: #8a97ab; margin-top: 4px; }
+.title { font-size: 22px; color: #33465e; margin-top: 8px; }
+
+/* -- slogan -- */
+.slogan {
+  margin: .3in .7in;
+  background: #0b2545;
+  border-radius: 16px;
+  padding: .35in .5in;
+  text-align: center;
+  color: #fff;
+}
+.slogan-main { font-size: 34px; font-weight: 800; line-height: 1.4; }
+.slogan-sub { font-size: 18px; color: #c9a44c; margin-top: 10px; font-weight: 700; }
+
+/* -- tags -- */
+.tags {
+  display: flex; flex-wrap: wrap; gap: .15in;
+  padding: .25in .7in; justify-content: center;
+}
+.tag {
+  background: #f4f6fa; border: 2px solid #d9e0ec; color: #0b2545;
+  font-size: 18px; font-weight: 600; padding: 10px 22px; border-radius: 30px;
+}
+
+/* -- contact grid -- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .3in;
+  padding: .2in .7in;
+}
+.contact-card {
+  background: #f4f6fa;
+  border: 2px solid #d9e0ec;
+  border-radius: 16px;
+  padding: .3in .25in;
+  text-align: center;
+}
+.contact-card .ico { font-size: 40px; margin-bottom: 8px; }
+.contact-card .label {
+  font-size: 15px; color: #5a6b85; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+}
+.contact-card .value { font-size: 26px; color: #0b2545; font-weight: 800; word-break: break-word; }
+.contact-card img.qr { width: 1.6in; height: 1.6in; margin: 4px auto 8px; display: block; }
+.contact-card .qr-caption { font-size: 16px; color: #0b2545; font-weight: 700; }
+
+/* -- info list -- */
+.info-list { padding: .2in .7in .1in; }
+.info-row {
+  display: flex; align-items: center; gap: .2in;
+  padding: .12in 0; border-bottom: 1px solid #eef1f6; font-size: 19px; color: #0b2545;
+}
+.info-row .ico { font-size: 24px; width: .5in; text-align: center; }
+.info-row b { font-weight: 700; margin-right: 6px; }
+
+/* -- footer -- */
+.footer {
+  margin-top: auto;
+  background: #0b2545;
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: .3in;
+  font-size: 16px;
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .poster { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- top brand bar -->
+  <div class="top-bar">
+    <div class="top-logo">
+      <img src="assets/logo.png" alt="RI YUE XING">
+      <div class="top-brand">RI YUE XING</div>
+    </div>
+    <div class="top-area">Kaohsiung, Taiwan<br>Since 1987</div>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <img class="hero-photo" src="assets/logo.png" alt="RI YUE XING Precision Industrial">
+  </div>
+
+  <!-- identity -->
+  <div class="identity">
+    <div class="name">Andrea Chang</div>
+    <div class="name-sub">張小姐 · Sales Manager</div>
+    <div class="title">RI YUE XING Precision Industrial Co., Ltd.</div>
+  </div>
+
+  <!-- slogan -->
+  <div class="slogan">
+    <div class="slogan-main">Precision CNC Components,<br>Built to Your Drawing</div>
+    <div class="slogan-sub">OEM / ODM Manufacturing Partner Since 1987</div>
+  </div>
+
+  <!-- tags -->
+  <div class="tags">
+    <span class="tag">⚙️ OEM / ODM</span>
+    <span class="tag">🔩 Swiss-Type CNC</span>
+    <span class="tag">📐 ±0.01mm Tolerance</span>
+    <span class="tag">🇹🇼 Made in Taiwan</span>
+  </div>
+
+  <!-- contact grid: WhatsApp account text / Phone text / Website QR / Products QR -->
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="ico">💬</div>
+      <div class="label">WhatsApp</div>
+      <div class="value">+886 987 860 149</div>
+    </div>
+    <div class="contact-card">
+      <div class="ico">☎️</div>
+      <div class="label">Factory Tel</div>
+      <div class="value">+886-7-701-3498</div>
+    </div>
+    <div class="contact-card">
+      <img class="qr" src="assets/poster-qr-website.png" alt="QR code to visit website">
+      <div class="qr-caption">🌐 Scan to Visit Our Website</div>
+    </div>
+    <div class="contact-card">
+      <img class="qr" src="assets/poster-qr-products.png" alt="QR code to view product range">
+      <div class="qr-caption">🔩 Scan to View Product Range</div>
+    </div>
+  </div>
+
+  <!-- info list -->
+  <div class="info-list">
+    <div class="info-row"><span class="ico">✉️</span><b>Email</b> scnc3499@gmail.com</div>
+    <div class="info-row"><span class="ico">🔗</span><b>LinkedIn</b> RI YUE XING Precision Industrial</div>
+    <div class="info-row"><span class="ico">📍</span><b>Factory</b> No.77-1, Jiangshan Rd., Daliao Dist., Kaohsiung City 831, Taiwan</div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">© RI YUE XING PRECISION INDUSTRIAL CO., LTD. · Since 1987</div>
+
+</div>
+</body>
+</html>
