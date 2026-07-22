@@ -7,9 +7,8 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Print target: 24in wide, height flows with content (roll/panel print — fix width, cut to length).
-   Confirm final width with your print vendor before output. */
-@page { size: 24in auto; margin: 0; }
+/* Roll-up banner (易拉展) target: 90cm x 180cm (stand is 90x200cm, allowing for top/bottom hardware). */
+@page { size: 90cm 180cm; margin: 0; }
 
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
@@ -20,7 +19,9 @@ body {
 }
 
 .poster {
-  width: 24in;
+  width: 90cm;
+  height: 180cm;
+  flex-shrink: 0;
   background: #fff;
   box-shadow: 0 0 40px rgba(0,0,0,.3);
   display: flex;
@@ -31,101 +32,100 @@ body {
 /* -- top bar -- */
 .top-bar {
   background: #0b2545;
-  padding: .5in .7in;
+  padding: 1.1in 1.03in;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-logo { display: flex; align-items: center; gap: .25in; }
-.top-logo img { width: .9in; height: .9in; object-fit: contain; }
-.top-brand { color: #fff; font-size: 32px; font-weight: 800; letter-spacing: 3px; }
-.top-area { color: rgba(255,255,255,.8); font-size: 16px; text-align: right; line-height: 1.5; }
+.top-logo { display: flex; align-items: center; gap: .5in; }
+.top-logo img { width: 2in; height: 2in; object-fit: contain; }
+.top-area { color: rgba(255,255,255,.9); font-size: 60px; font-weight: 700; text-align: right; line-height: 1.5; }
 
 /* -- hero -- */
 .hero {
+  flex: 1;
   background: linear-gradient(to bottom, #e8edf5 0%, #fff 100%);
   text-align: center;
-  padding: .6in .7in .3in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6in;
 }
 .hero-photo {
-  width: 2.6in; height: 2.6in;
+  width: 9in; height: 9in;
   border-radius: 50%;
   object-fit: contain;
   background: #fff;
-  border: 8px solid #fff;
-  box-shadow: 0 10px 30px rgba(11,37,69,.2);
-  padding: .25in;
+  border: 16px solid #fff;
+  box-shadow: 0 20px 60px rgba(11,37,69,.25);
+  padding: .8in;
   margin: 0 auto;
 }
-
-/* -- identity -- */
-.identity { text-align: center; padding: .3in .7in .1in; }
-.name { font-size: 44px; font-weight: 800; color: #0b2545; letter-spacing: 1px; }
-.name-sub { font-size: 20px; color: #8a97ab; margin-top: 4px; }
-.title { font-size: 22px; color: #33465e; margin-top: 8px; }
+.hero-brand { color: #0b2545; font-size: 170px; font-weight: 800; letter-spacing: 8px; line-height: 1.1; }
+.hero-brand-sub { color: #c9a44c; font-size: 46px; font-weight: 700; letter-spacing: 10px; margin-top: 14px; }
 
 /* -- slogan -- */
 .slogan {
-  margin: .3in .7in;
+  margin: .44in 1.03in;
   background: #0b2545;
-  border-radius: 16px;
-  padding: .35in .5in;
+  border-radius: 24px;
+  padding: .52in .74in;
   text-align: center;
   color: #fff;
 }
-.slogan-main { font-size: 34px; font-weight: 800; line-height: 1.4; }
-.slogan-sub { font-size: 18px; color: #c9a44c; margin-top: 10px; font-weight: 700; }
+.slogan-main { font-size: 50px; font-weight: 800; line-height: 1.4; }
+.slogan-sub { font-size: 27px; color: #c9a44c; margin-top: 14px; font-weight: 700; }
 
 /* -- tags -- */
 .tags {
-  display: flex; flex-wrap: wrap; gap: .15in;
-  padding: .25in .7in; justify-content: center;
+  display: flex; flex-wrap: wrap; gap: .22in;
+  padding: .37in 1.03in; justify-content: center;
 }
 .tag {
-  background: #f4f6fa; border: 2px solid #d9e0ec; color: #0b2545;
-  font-size: 18px; font-weight: 600; padding: 10px 22px; border-radius: 30px;
+  background: #f4f6fa; border: 3px solid #d9e0ec; color: #0b2545;
+  font-size: 27px; font-weight: 600; padding: 15px 32px; border-radius: 44px;
 }
 
 /* -- contact grid -- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .3in;
-  padding: .2in .7in;
+  gap: .44in;
+  padding: .3in 1.03in;
 }
 .contact-card {
   background: #f4f6fa;
-  border: 2px solid #d9e0ec;
-  border-radius: 16px;
-  padding: .3in .25in;
+  border: 3px solid #d9e0ec;
+  border-radius: 24px;
+  padding: .44in .37in;
   text-align: center;
 }
-.contact-card .ico { font-size: 40px; margin-bottom: 8px; }
+.contact-card .ico { font-size: 59px; margin-bottom: 12px; }
 .contact-card .label {
-  font-size: 15px; color: #5a6b85; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+  font-size: 22px; color: #5a6b85; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;
 }
-.contact-card .value { font-size: 26px; color: #0b2545; font-weight: 800; word-break: break-word; }
-.contact-card img.qr { width: 1.6in; height: 1.6in; margin: 4px auto 8px; display: block; }
-.contact-card .qr-caption { font-size: 16px; color: #0b2545; font-weight: 700; }
+.contact-card .value { font-size: 38px; color: #0b2545; font-weight: 800; word-break: break-word; }
+.contact-card img.qr { width: 2.36in; height: 2.36in; margin: 6px auto 12px; display: block; }
+.contact-card .qr-caption { font-size: 24px; color: #0b2545; font-weight: 700; }
 
 /* -- info list -- */
-.info-list { padding: .2in .7in .1in; }
+.info-list { padding: .3in 1.03in .15in; }
 .info-row {
-  display: flex; align-items: center; gap: .2in;
-  padding: .12in 0; border-bottom: 1px solid #eef1f6; font-size: 19px; color: #0b2545;
+  display: flex; align-items: center; gap: .3in;
+  padding: .18in 0; border-bottom: 1px solid #eef1f6; font-size: 28px; color: #0b2545;
 }
-.info-row .ico { font-size: 24px; width: .5in; text-align: center; }
-.info-row b { font-weight: 700; margin-right: 6px; }
+.info-row .ico { font-size: 35px; width: .74in; text-align: center; }
+.info-row b { font-weight: 700; margin-right: 8px; }
 
 /* -- footer -- */
 .footer {
-  margin-top: auto;
   background: #0b2545;
   color: rgba(255,255,255,.7);
   text-align: center;
-  padding: .3in;
-  font-size: 16px;
+  padding: .44in;
+  font-size: 24px;
 }
 
 @media print {
@@ -141,7 +141,6 @@ body {
   <div class="top-bar">
     <div class="top-logo">
       <img src="assets/logo.png" alt="RI YUE XING">
-      <div class="top-brand">RI YUE XING</div>
     </div>
     <div class="top-area">Kaohsiung, Taiwan<br>Since 1987</div>
   </div>
@@ -149,13 +148,10 @@ body {
   <!-- hero -->
   <div class="hero">
     <img class="hero-photo" src="assets/logo.png" alt="RI YUE XING Precision Industrial">
-  </div>
-
-  <!-- identity -->
-  <div class="identity">
-    <div class="name">Andrea Chang</div>
-    <div class="name-sub">張小姐 · Sales Manager</div>
-    <div class="title">RI YUE XING Precision Industrial Co., Ltd.</div>
+    <div>
+      <div class="hero-brand">RI YUE XING</div>
+      <div class="hero-brand-sub">PRECISION INDUSTRIAL</div>
+    </div>
   </div>
 
   <!-- slogan -->
@@ -197,7 +193,7 @@ body {
   <!-- info list -->
   <div class="info-list">
     <div class="info-row"><span class="ico">✉️</span><b>Email</b> scnc3499@gmail.com</div>
-    <div class="info-row"><span class="ico">🔗</span><b>LinkedIn</b> RI YUE XING Precision Industrial</div>
+    <div class="info-row"><span class="ico">🔗</span><b>LinkedIn</b> https://www.linkedin.com/in/riyuexing1987/</div>
     <div class="info-row"><span class="ico">📍</span><b>Factory</b> No.77-1, Jiangshan Rd., Daliao Dist., Kaohsiung City 831, Taiwan</div>
   </div>
 
