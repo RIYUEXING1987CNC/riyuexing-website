@@ -7,8 +7,8 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Roll-up banner (易拉展) target: 90cm x 180cm (stand is 90x200cm, allowing for top/bottom hardware). */
-@page { size: 90cm 180cm; margin: 0; }
+/* Roll-up banner (易拉展) target: 100cm x 200cm print size. Mirrors card.html's layout/content, scaled up. */
+@page { size: 100cm 200cm; margin: 0; }
 
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
@@ -19,8 +19,8 @@ body {
 }
 
 .poster {
-  width: 90cm;
-  height: 180cm;
+  width: 100cm;
+  height: 200cm;
   flex-shrink: 0;
   background: #fff;
   box-shadow: 0 0 40px rgba(0,0,0,.3);
@@ -32,14 +32,15 @@ body {
 /* -- top bar -- */
 .top-bar {
   background: #0b2545;
-  padding: 1.1in 1.03in;
+  padding: 1.222in 1.144in;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-logo { display: flex; align-items: center; gap: .5in; }
-.top-logo img { width: 2in; height: 2in; object-fit: contain; }
-.top-area { color: rgba(255,255,255,.9); font-size: 60px; font-weight: 700; text-align: right; line-height: 1.5; }
+.top-logo { display: flex; align-items: center; gap: .56in; }
+.top-logo img { width: 2.222in; height: 2.222in; object-fit: contain; }
+.top-brand { color: #fff; font-size: 1.4in; font-weight: bold; letter-spacing: 4px; }
+.top-area { font-size: 1.2in; color: rgba(255,255,255,.9); text-align: right; line-height: 1.5; font-weight: 700; }
 
 /* -- hero -- */
 .hero {
@@ -47,86 +48,81 @@ body {
   background: linear-gradient(to bottom, #e8edf5 0%, #fff 100%);
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .6in;
 }
 .hero-photo {
-  width: 9in; height: 9in;
+  width: 40cm; height: 40cm;
   border-radius: 50%;
   object-fit: contain;
   background: #fff;
-  border: 16px solid #fff;
-  box-shadow: 0 20px 60px rgba(11,37,69,.25);
-  padding: .8in;
+  border: .3in solid #fff;
+  box-shadow: 0 20px 60px rgba(11,37,69,.2);
+  padding: 1in;
   margin: 0 auto;
 }
-.hero-brand { color: #0b2545; font-size: 170px; font-weight: 800; letter-spacing: 8px; line-height: 1.1; }
-.hero-brand-sub { color: #c9a44c; font-size: 46px; font-weight: 700; letter-spacing: 10px; margin-top: 14px; }
+
+/* -- identity -- */
+.identity { padding: .74in 1in .15in; text-align: center; }
+.name { font-size: 2.25in; font-weight: bold; color: #0b2545; letter-spacing: 2px; margin-bottom: .1in; }
+.name-sub { font-size: 1.17in; color: #8a97ab; letter-spacing: 2px; }
+.title { font-size: 1.26in; color: #33465e; margin-top: .18in; }
 
 /* -- slogan -- */
 .slogan {
-  margin: .44in 1.03in;
+  margin: .64in 1in;
   background: #0b2545;
-  border-radius: 24px;
-  padding: .52in .74in;
+  border-radius: .4in;
+  padding: .56in .8in;
   text-align: center;
   color: #fff;
 }
-.slogan-main { font-size: 50px; font-weight: 800; line-height: 1.4; }
-.slogan-sub { font-size: 27px; color: #c9a44c; margin-top: 14px; font-weight: 700; }
+.slogan-main { font-size: 1.6in; font-weight: 800; line-height: 1.4; }
+.slogan-sub { font-size: 1.08in; color: #c9a44c; margin-top: .2in; font-weight: 700; }
 
 /* -- tags -- */
-.tags {
-  display: flex; flex-wrap: wrap; gap: .22in;
-  padding: .37in 1.03in; justify-content: center;
-}
+.tags { display: flex; flex-wrap: wrap; gap: .32in; padding: 0 1in .64in; justify-content: center; }
 .tag {
   background: #f4f6fa; border: 3px solid #d9e0ec; color: #0b2545;
-  font-size: 27px; font-weight: 600; padding: 15px 32px; border-radius: 44px;
+  font-size: 1.08in; font-weight: 600; padding: .2in .52in; border-radius: 1.9in;
 }
 
-/* -- contact grid -- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .44in;
-  padding: .3in 1.03in;
+/* -- CTA -- */
+.cta-group { padding: 0 .8in .8in; display: flex; flex-direction: column; gap: .4in; }
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: .32in;
+  padding: .56in .8in; border-radius: .32in; font-size: 1.4in; font-weight: bold;
+  font-family: inherit; text-decoration: none; border: none;
 }
-.contact-card {
-  background: #f4f6fa;
-  border: 3px solid #d9e0ec;
-  border-radius: 24px;
-  padding: .44in .37in;
-  text-align: center;
-}
-.contact-card .ico { font-size: 59px; margin-bottom: 12px; }
-.contact-card .label {
-  font-size: 22px; color: #5a6b85; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;
-}
-.contact-card .value { font-size: 38px; color: #0b2545; font-weight: 800; word-break: break-word; }
-.contact-card img.qr { width: 2.36in; height: 2.36in; margin: 6px auto 12px; display: block; }
-.contact-card .qr-caption { font-size: 24px; color: #0b2545; font-weight: 700; }
+.btn-phone { background: linear-gradient(135deg, #0b2545 0%, #123a6b 100%); color: #fff; box-shadow: 0 3px 12px rgba(11,37,69,.3); }
+.btn-whatsapp { background: #25D366; color: #fff; box-shadow: 0 3px 12px rgba(37,211,102,.3); }
+.btn-web { background: #fff; color: #0b2545; border: 3px solid #c9a44c; }
+.btn-products { background: #fff; color: #0b2545; border: 3px solid #c9a44c; }
 
-/* -- info list -- */
-.info-list { padding: .3in 1.03in .15in; }
-.info-row {
-  display: flex; align-items: center; gap: .3in;
-  padding: .18in 0; border-bottom: 1px solid #eef1f6; font-size: 28px; color: #0b2545;
+/* -- contact list -- */
+.contact-list { border-top: 1px solid #eef1f6; padding: .64in 1in; }
+.contact-item {
+  display: flex; align-items: center; gap: .48in;
+  padding: .32in 0; border-bottom: 1px solid #f4f6fa; text-decoration: none; color: #0b2545; font-size: 1.26in;
 }
-.info-row .ico { font-size: 35px; width: .74in; text-align: center; }
-.info-row b { font-weight: 700; margin-right: 8px; }
+.contact-item:last-child { border-bottom: none; }
+.contact-icon {
+  width: 1.26in; height: 1.26in; background: #f4f6fa; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: .6in; flex-shrink: 0;
+}
+.contact-text { flex: 1; }
+.contact-label { font-size: .98in; color: #99a4b8; margin-bottom: .04in; }
+.contact-value { font-size: 1.26in; color: #0b2545; word-break: break-word; }
+
+/* -- qr -- */
+.qr-section { padding: .64in 1in .8in; text-align: center; border-top: 1px solid #eef1f6; }
+.qr-section img {
+  width: 33cm; height: 33cm; border: 1px solid #d9e0ec; border-radius: .32in; padding: .32in; background: #fff;
+}
+.qr-caption { font-size: 1.05in; color: #5a6b85; font-weight: 700; margin-top: .32in; }
 
 /* -- footer -- */
-.footer {
-  background: #0b2545;
-  color: rgba(255,255,255,.7);
-  text-align: center;
-  padding: .44in;
-  font-size: 24px;
-}
+.footer { background: #0b2545; color: rgba(255,255,255,.65); text-align: center; padding: .48in .8in; font-size: .98in; }
 
 @media print {
   body { background: #fff; padding: 0; }
@@ -141,6 +137,7 @@ body {
   <div class="top-bar">
     <div class="top-logo">
       <img src="assets/logo.png" alt="RI YUE XING">
+      <div class="top-brand">RI YUE XING</div>
     </div>
     <div class="top-area">Kaohsiung, Taiwan<br>Since 1987</div>
   </div>
@@ -148,10 +145,13 @@ body {
   <!-- hero -->
   <div class="hero">
     <img class="hero-photo" src="assets/logo.png" alt="RI YUE XING Precision Industrial">
-    <div>
-      <div class="hero-brand">RI YUE XING</div>
-      <div class="hero-brand-sub">PRECISION INDUSTRIAL</div>
-    </div>
+  </div>
+
+  <!-- identity -->
+  <div class="identity">
+    <div class="name">Andrea Chang</div>
+    <div class="name-sub">Sales Manager</div>
+    <div class="title">RI YUE XING Precision Industrial Co., Ltd.</div>
   </div>
 
   <!-- slogan -->
@@ -168,33 +168,57 @@ body {
     <span class="tag">🇹🇼 Made in Taiwan</span>
   </div>
 
-  <!-- contact grid: WhatsApp account text / Phone text / Website QR / Products QR -->
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="ico">💬</div>
-      <div class="label">WhatsApp</div>
-      <div class="value">+886 987 860 149</div>
+  <!-- CTA -->
+  <div class="cta-group">
+    <div class="btn btn-whatsapp">💬 Chat on WhatsApp</div>
+    <div class="btn btn-phone">📞 Call +886 987 860 149</div>
+    <div class="btn btn-web">🌐 Visit Our Website</div>
+    <div class="btn btn-products">🔩 View Product Range</div>
+  </div>
+
+  <!-- contact list -->
+  <div class="contact-list">
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div class="contact-text">
+        <div class="contact-label">Mobile / WhatsApp</div>
+        <div class="contact-value">+886 987 860 149</div>
+      </div>
     </div>
-    <div class="contact-card">
-      <div class="ico">☎️</div>
-      <div class="label">Factory Tel</div>
-      <div class="value">+886-7-701-3498</div>
+    <div class="contact-item">
+      <div class="contact-icon">☎️</div>
+      <div class="contact-text">
+        <div class="contact-label">Factory Tel</div>
+        <div class="contact-value">+886-7-701-3498</div>
+      </div>
     </div>
-    <div class="contact-card">
-      <img class="qr" src="assets/poster-qr-website.png" alt="QR code to visit website">
-      <div class="qr-caption">🌐 Scan to Visit Our Website</div>
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-text">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">scnc3499@gmail.com</div>
+      </div>
     </div>
-    <div class="contact-card">
-      <img class="qr" src="assets/poster-qr-products.png" alt="QR code to view product range">
-      <div class="qr-caption">🔩 Scan to View Product Range</div>
+    <div class="contact-item">
+      <div class="contact-icon">🔗</div>
+      <div class="contact-text">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">https://www.linkedin.com/in/riyuexing1987/</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-text">
+        <div class="contact-label">Factory Address</div>
+        <div class="contact-value">No.77-1, Jiangshan Rd., Daliao Dist., Kaohsiung City 831, Taiwan</div>
+      </div>
     </div>
   </div>
 
-  <!-- info list -->
-  <div class="info-list">
-    <div class="info-row"><span class="ico">✉️</span><b>Email</b> scnc3499@gmail.com</div>
-    <div class="info-row"><span class="ico">🔗</span><b>LinkedIn</b> https://www.linkedin.com/in/riyuexing1987/</div>
-    <div class="info-row"><span class="ico">📍</span><b>Factory</b> No.77-1, Jiangshan Rd., Daliao Dist., Kaohsiung City 831, Taiwan</div>
+  <!-- qr -->
+  <div class="qr-section">
+    <img src="assets/card-qrcode.png" alt="QR code linking to digital business card">
+    <div class="qr-caption">Scan to view digital business card &amp; contact links</div>
   </div>
 
   <!-- footer -->
